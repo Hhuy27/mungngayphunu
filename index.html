@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#fff0f6">
 <title>💗 Tặng Hồng Ngọc 💗</title>
 
@@ -19,6 +19,12 @@
   --purple: #b87bd5;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,8 +32,8 @@ html {
 body {
   min-height: 100vh;
   min-height: 100dvh;
-  overflow-x: hidden;
-  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #75445c;
   background:
     radial-gradient(ellipse at 15% 20%, #ffe0ec 0%, transparent 42%),
@@ -39,19 +45,24 @@ body {
 .garden {
   position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
+  perspective: 1000px;
 }
 
 .container {
   position: relative;
   z-index: 3;
-  width: min(92%, 760px);
+  width: 100%;
+  max-width: 680px;
   min-height: 100vh;
   min-height: 100dvh;
-  margin: auto;
-  padding: 40px 16px 140px;
+  margin: 0 auto;
+  padding: 24px 16px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,37 +71,40 @@ body {
 }
 
 .eyebrow {
-  font-size: .78rem;
+  font-size: clamp(0.7rem, 2.5vw, 0.82rem);
   letter-spacing: 3px;
   color: #bd7296;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  max-width: 100%;
 }
 
 h1 {
   font-family: Georgia, serif;
-  font-size: clamp(2.4rem, 8vw, 5.8rem);
+  font-size: clamp(2.2rem, 7.5vw, 4.8rem);
   line-height: 1.2;
   color: var(--deep-pink);
   text-shadow: 0 5px 25px #f8a7cb66;
   animation: titleGlow 3s ease-in-out infinite alternate;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 h1 span {
   display: block;
-  margin-top: 10px;
-  font-size: .35em;
-  line-height: 1.6;
+  margin-top: 8px;
+  font-size: .38em;
+  line-height: 1.5;
   font-style: italic;
   color: #aa70bb;
   letter-spacing: 1.5px;
 }
 
 .name {
-  margin-top: 14px;
+  margin-top: 10px;
   font-family: Georgia, serif;
-  font-size: clamp(2.8rem, 10vw, 6rem);
+  font-size: clamp(2.6rem, 9.5vw, 5.2rem);
   font-weight: bold;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   background: linear-gradient(
     120deg, #ff6099, #c276df, #ff8bb7, #d83c7c
   );
@@ -104,8 +118,8 @@ h1 span {
 
 .heart-line {
   color: #f17daa;
-  font-size: 1.3rem;
-  margin: 16px 0;
+  font-size: 1.2rem;
+  margin: 10px 0;
   letter-spacing: 3px;
 }
 
@@ -113,22 +127,23 @@ h1 span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  margin-top: 24px;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 button {
   border: none;
   border-radius: 50px;
-  padding: 14px 24px;
-  font-size: .95rem;
+  padding: 14px 26px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform .3s, box-shadow .3s;
 }
 
 button:active {
-  transform: scale(0.96);
+  transform: scale(0.95);
 }
 
 .primary {
@@ -137,15 +152,15 @@ button:active {
   box-shadow: 0 6px 20px #e95d9744;
 }
 
-/* KHUNG LỜI CHÚC */
+/* KHUNG LỜI CHÚC (CHUẨN BỐ CỤC GỌN GÀNG NHƯ GIAO DIỆN XƯỞNG) */
 .greeting-box {
   position: relative;
   z-index: 4;
   isolation: isolate;
   width: 100%;
-  max-width: 680px;
-  margin: 15px auto 25px;
-  padding: clamp(24px, 4vw, 42px) clamp(16px, 4vw, 36px);
+  max-width: 620px;
+  margin: 12px auto 18px;
+  padding: clamp(22px, 4vw, 38px) clamp(16px, 4vw, 28px);
 
   background: linear-gradient(
     145deg,
@@ -154,8 +169,8 @@ button:active {
     rgba(255, 248, 251, .97)
   );
 
-  border: 2.5px solid #f47ca8;
-  border-radius: 26px;
+  border: 3px solid #f47ca8;
+  border-radius: 28px;
 
   box-shadow:
     0 0 0 4px rgba(255, 182, 210, .23),
@@ -178,7 +193,7 @@ button:active {
   z-index: -1;
   inset: 7px;
   border: 1.2px dashed rgba(224, 83, 139, .55);
-  border-radius: 19px;
+  border-radius: 20px;
   pointer-events: none;
 }
 
@@ -211,13 +226,13 @@ button:active {
 .greeting-box p {
   position: relative;
   z-index: 1;
-  max-width: 580px;
+  max-width: 100%;
   margin: 0 auto 14px;
   color: #71304b;
   font-size: clamp(14px, 2.2vw, 17px);
   font-weight: 500;
   line-height: 1.85;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .greeting-box .signature {
@@ -229,7 +244,7 @@ button:active {
   font-weight: bold;
 }
 
-/* HOA NỞ KHẮP MÀN HÌNH */
+/* HOA HOẠT HỌA NỀN */
 .flower {
   position: absolute;
   left: var(--x);
@@ -240,7 +255,7 @@ button:active {
   transform-origin: 50% 85%;
   animation: flowerSway var(--sway) ease-in-out infinite alternate;
   animation-delay: var(--sway-delay);
-  filter: drop-shadow(0 8px 12px #9f3d6922);
+  filter: drop-shadow(0 10px 15px rgba(159, 61, 105, 0.2));
   will-change: transform;
 }
 
@@ -318,12 +333,12 @@ button:active {
 
 @keyframes flowerSway {
   from { transform: rotate(-2.5deg) translateY(0); }
-  to { transform: rotate(2.5deg) translateY(-6px); }
+  to { transform: rotate(2.5deg) translateY(-8px); }
 }
 
 @keyframes titleGlow {
   from { filter: drop-shadow(0 0 0 #ff9fc0); }
-  to { filter: drop-shadow(0 0 10px #ffb0d0); }
+  to { filter: drop-shadow(0 0 12px #ffb0d0); }
 }
 
 @keyframes nameShine {
@@ -370,22 +385,26 @@ button:active {
   }
 }
 
-/* BÓ HOA HAI GÓC */
+/* BÓ HOA HAI GÓC (ĐÃ CỐ ĐỊNH KHÔNG TRÀN MÀN HÌNH) */
 .corner-flower {
   position: fixed;
   z-index: 2;
-  bottom: -10px;
-  width: clamp(160px, 38vw, 320px);
+  bottom: 0px;
+  width: clamp(140px, 35vw, 280px);
   pointer-events: none;
   transform-origin: bottom center;
   animation: cornerSway 6s ease-in-out infinite alternate;
   filter: drop-shadow(0 6px 16px #c77c9930);
 }
 
-.corner-left { left: -20px; }
+.corner-left { 
+  left: 0;
+  transform: translate(-10%, 10%);
+}
+
 .corner-right {
-  right: -20px;
-  transform: scaleX(-1);
+  right: 0;
+  transform: translate(10%, 10%) scaleX(-1);
   animation-name: cornerSwayRight;
 }
 
@@ -396,13 +415,13 @@ button:active {
 }
 
 @keyframes cornerSway {
-  from { rotate: -2deg; }
-  to { rotate: 2deg; }
+  from { transform: translate(-10%, 10%) rotate(-2deg); }
+  to { transform: translate(-10%, 10%) rotate(2deg); }
 }
 
 @keyframes cornerSwayRight {
-  from { rotate: 2deg; }
-  to { rotate: -2deg; }
+  from { transform: translate(10%, 10%) scaleX(-1) rotate(2deg); }
+  to { transform: translate(10%, 10%) scaleX(-1) rotate(-2deg); }
 }
 
 /* ÁNH SÁNG LẤP LÁNH */
@@ -430,19 +449,15 @@ button:active {
   }
 }
 
-/* TỐI ƯU RIÊNG CHO MÀN HÌNH ĐIỆN THOẠI */
+/* ĐIỀU CHỈNH RIÊNG CHO ĐIỆN THOẠI */
 @media (max-width: 600px) {
   .container {
-    padding: 30px 12px 100px;
+    padding: 20px 12px 80px;
     justify-content: flex-start;
   }
 
-  h1 {
-    margin-top: 10px;
-  }
-
   .greeting-box {
-    margin: 12px auto 20px;
+    margin: 10px auto 16px;
   }
 }
 
@@ -613,16 +628,19 @@ function flowerSVG(palette, withStem = true) {
         <stop offset="25%" stop-color="${light}"/>
         <stop offset="100%" stop-color="${dark}"/>
       </radialGradient>
+
       <radialGradient id="middle${uid}" cx="30%" cy="15%" r="90%">
         <stop offset="0%" stop-color="#fffdfd"/>
         <stop offset="35%" stop-color="${light}"/>
         <stop offset="100%" stop-color="${dark}"/>
       </radialGradient>
+
       <radialGradient id="center${uid}" cx="35%" cy="25%" r="85%">
         <stop offset="0%" stop-color="#fffbd9"/>
         <stop offset="60%" stop-color="${center}"/>
         <stop offset="100%" stop-color="#df9b45"/>
       </radialGradient>
+
       <linearGradient id="leaf${uid}" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#a7d98e"/>
         <stop offset="50%" stop-color="#5e9c62"/>
@@ -656,19 +674,18 @@ function generateGarden() {
   garden.innerHTML = "";
   const isMobile = window.innerWidth <= 600;
 
-  // Giảm số lượng item nhẹ trên mobile để máy chạy cực mượt, không bị lag
-  const flowerCount = isMobile ? 35 : 120;
+  const flowerCount = isMobile ? 30 : 100;
   for (let i = 0; i < flowerCount; i++) {
     const flower = document.createElement("div");
     flower.className = "flower";
 
-    const x = Math.random() * 100;
-    const y = Math.random() * 100;
-    const size = isMobile ? (55 + Math.random() * 65) : (110 + Math.random() * 180);
+    const x = Math.random() * 92;
+    const y = Math.random() * 95;
+    const size = isMobile ? (55 + Math.random() * 65) : (100 + Math.random() * 160);
     const height = size * 1.1;
 
     const nearCenter = x > 15 && x < 85 && y > 15 && y < 85;
-    const opacity = nearCenter ? (0.12 + Math.random() * 0.15) : (0.45 + Math.random() * 0.35);
+    const opacity = nearCenter ? (0.1 + Math.random() * 0.15) : (0.45 + Math.random() * 0.35);
     const palette = palettes[Math.floor(Math.random() * palettes.length)];
 
     flower.style.setProperty("--x", x + "%");
@@ -686,7 +703,7 @@ function generateGarden() {
   }
 
   // Cánh hoa rơi
-  const petalCount = isMobile ? 25 : 80;
+  const petalCount = isMobile ? 22 : 65;
   const petalColors = [
     "radial-gradient(ellipse at 28% 20%,#fff8fc,#ffb3cd 50%,#ed6097)",
     "radial-gradient(ellipse at 28% 20%,#fff7ff,#d9b7ff 50%,#a67ad7)",
@@ -699,29 +716,29 @@ function generateGarden() {
     petal.className = "petal";
     petal.style.background = petalColors[Math.floor(Math.random() * petalColors.length)];
 
-    petal.style.setProperty("--fall-x", Math.random() * 100 + "%");
-    petal.style.setProperty("--petal-size", (7 + Math.random() * 10) + "px");
-    petal.style.setProperty("--fall-time", (8 + Math.random() * 10) + "s");
+    petal.style.setProperty("--fall-x", Math.random() * 95 + "%");
+    petal.style.setProperty("--petal-size", (8 + Math.random() * 12) + "px");
+    petal.style.setProperty("--fall-time", (9 + Math.random() * 12) + "s");
     petal.style.setProperty("--fall-delay", (-Math.random() * 20) + "s");
-    petal.style.setProperty("--drift", (-80 + Math.random() * 160) + "px");
+    petal.style.setProperty("--drift", (-60 + Math.random() * 120) + "px");
     petal.style.setProperty("--rotation", (360 + Math.random() * 720) + "deg");
     petal.style.setProperty("--fall-opacity", (0.4 + Math.random() * 0.4).toFixed(2));
 
     garden.appendChild(petal);
   }
 
-  // Lấp lánh
+  // Ánh sáng lấp lánh
   const sparkleCount = isMobile ? 15 : 35;
   for (let i = 0; i < sparkleCount; i++) {
     const sparkle = document.createElement("div");
     sparkle.className = "sparkle";
     sparkle.textContent = Math.random() > 0.5 ? "✧" : "✦";
 
-    sparkle.style.setProperty("--spark-x", Math.random() * 100 + "%");
-    sparkle.style.setProperty("--spark-y", Math.random() * 100 + "%");
-    sparkle.style.setProperty("--spark-size", (9 + Math.random() * 12) + "px");
-    sparkle.style.setProperty("--spark-time", (2 + Math.random() * 3) + "s");
-    sparkle.style.setProperty("--spark-delay", (-Math.random() * 4) + "s");
+    sparkle.style.setProperty("--spark-x", Math.random() * 95 + "%");
+    sparkle.style.setProperty("--spark-y", Math.random() * 95 + "%");
+    sparkle.style.setProperty("--spark-size", (10 + Math.random() * 12) + "px");
+    sparkle.style.setProperty("--spark-time", (2 + Math.random() * 4) + "s");
+    sparkle.style.setProperty("--spark-delay", (-Math.random() * 5) + "s");
 
     garden.appendChild(sparkle);
   }
