@@ -3,9 +3,10 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#fff0f6">
-<title> 💗</title>
+<meta name="description" content="Một món quà nhỏ dành tặng Hồng Ngọc nhân ngày 20/10.">
+<title>Gửi Hồng Ngọc 💗</title>
 
 <style>
 * {
@@ -18,128 +19,29 @@
   --pink: #f65b91;
   --deep-pink: #c92f70;
   --purple: #b87bd5;
+  --text: #75445c;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   min-height: 100vh;
-  overflow-x: hidden;
-  font-family: "Segoe UI", sans-serif;
-  color: #75445c;
+  min-height: 100svh;
+  overflow-x: clip;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
   background:
-    radial-gradient(ellipse at 15% 20%, #ffe0ec 0%, transparent 42%),
-    radial-gradient(ellipse at 85% 75%, #eadcff 0%, transparent 45%),
+    radial-gradient(ellipse at 10% 15%, #ffe0ec 0%, transparent 42%),
+    radial-gradient(ellipse at 90% 75%, #eadcff 0%, transparent 45%),
     linear-gradient(135deg, #fffafc, #fff0f6 55%, #f8f0ff);
 }
 
-.garden {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.container {
-  position: relative;
-  z-index: 3;
-  width: min(94%, 760px);
-  min-height: 100vh;
-  margin: auto;
-  padding: 65px 20px 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.eyebrow {
-  font-size: .82rem;
-  letter-spacing: 4px;
-  color: #bd7296;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(3rem, 9vw, 5.8rem);
-  line-height: 1.2;
-  color: var(--deep-pink);
-  text-shadow: 0 5px 25px #f8a7cb66;
-  animation: titleGlow 3s ease-in-out infinite alternate;
-}
-
-h1 span {
-  display: block;
-  margin-top: 15px;
-  font-size: .32em;
-  line-height: 1.8;
-  font-style: italic;
-  color: #aa70bb;
-  letter-spacing: 2px;
-}
-
-.name {
-  margin-top: 18px;
-  font-family: Georgia, serif;
-  font-size: clamp(3.2rem, 11vw, 6rem);
-  font-weight: bold;
-  letter-spacing: 5px;
-  background: linear-gradient(
-    120deg, #ff6099, #c276df, #ff8bb7, #d83c7c
-  );
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: nameShine 6s linear infinite;
-  filter: drop-shadow(0 5px 14px #f4a2c255);
-}
-
-.heart-line {
-  color: #f17daa;
-  font-size: 1.5rem;
-  margin: 20px 0;
-  letter-spacing: 4px;
-}
-
-.description {
-  max-width: 530px;
-  font-size: 1.06rem;
-  line-height: 2;
-  color: #805b6d;
-  text-shadow: 0 1px 1px #ffffff80;
-}
-
-.description strong {
-  color: #d93d81;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 30px;
-}
-
 button {
-  border: none;
-  border-radius: 50px;
-  padding: 15px 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform .3s, box-shadow .3s;
-}
-
-button:hover {
-  transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 10px 25px #d96a9b44;
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus-visible {
@@ -147,285 +49,326 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-.primary {
-  color: white;
-  background: linear-gradient(135deg, #ff8db5, #e83e88);
-  box-shadow: 0 6px 20px #e95d9744;
-}
-
-.secondary {
-  color: #b25b89;
-  background: #ffffffdc;
-  border: 1px solid #f5c4d9;
-}
-
-.hint {
-  font-size: .85rem;
-  color: #bd8da4;
-  margin-top: 25px;
-}
-
-/* KHUNG LỜI CHÚC */
-.greeting-box {
-  position: relative;
-  z-index: 4;
-  isolation: isolate;
-  width: min(94%, 740px);
-  margin: 25px auto 35px;
-  padding: clamp(30px, 5vw, 48px);
-
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, .97),
-    rgba(255, 232, 243, .95),
-    rgba(255, 248, 251, .97)
-  );
-
-  border: 3px solid #f47ca8;
-  border-radius: 30px;
-
-  box-shadow:
-    0 0 0 6px rgba(255, 182, 210, .23),
-    0 15px 40px rgba(190, 50, 105, .22),
-    inset 0 0 25px rgba(255, 180, 210, .16);
-
-  text-align: center;
-  color: #71304b;
-  line-height: 1.95;
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  animation: cardIn 1.2s ease both;
-}
-
-/* Viền trang trí bên trong khung */
-.greeting-box::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 9px;
-  border: 1.5px dashed rgba(224, 83, 139, .55);
-  border-radius: 21px;
+/* LỚP HIỆU ỨNG HOA NỀN */
+.garden {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
   pointer-events: none;
+  z-index: 0;
+  contain: strict;
 }
 
-/* Hoa trang trí góc */
-.corner-decoration {
-  position: absolute;
-  top: -25px;
-  left: 18px;
-  font-size: 36px;
-  filter: drop-shadow(0 4px 6px rgba(214, 51, 120, .25));
-}
-
-.greeting-box::after {
-  content: "🌹";
-  position: absolute;
-  right: 15px;
-  bottom: -25px;
-  font-size: 38px;
-  filter: drop-shadow(0 4px 6px rgba(214, 51, 120, .25));
-}
-
-/* Tiêu đề bên trong khung */
-.greeting-box h2 {
-  position: relative;
-  z-index: 1;
-  color: #cf2e72;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(23px, 4vw, 34px);
-  line-height: 1.5;
-  margin-bottom: 22px;
-  text-shadow: 0 3px 12px rgba(214, 51, 120, .15);
-}
-
-/* Nội dung lời chúc */
-.greeting-box p {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  margin: 0 auto 17px;
-  color: #71304b;
-  font-size: clamp(15px, 2.3vw, 18px);
-  font-weight: 500;
-  line-height: 1.95;
-  overflow-wrap: anywhere;
-}
-
-/* Câu kết lời chúc */
-.greeting-box .signature {
-  margin-top: 25px;
-  margin-bottom: 0;
-  color: #c62c70;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(20px, 3vw, 26px);
-  font-weight: bold;
-  text-shadow: 0 2px 8px rgba(214, 51, 120, .12);
-}
-
-/* HOA NỞ KHẮP MÀN HÌNH */
 .flower {
   position: absolute;
   left: var(--x);
   top: var(--y);
   width: var(--size);
-  height: var(--height);
   opacity: var(--opacity);
   transform-origin: 50% 85%;
-  animation: flowerSway var(--sway) ease-in-out infinite alternate;
-  animation-delay: var(--sway-delay);
-  filter: drop-shadow(0 12px 15px #9f3d6933);
+  animation: sway var(--duration) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+  filter: drop-shadow(0 5px 9px #a8326330);
   will-change: transform;
 }
 
 .flower svg {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: visible;
 }
 
-.flower .plant {
-  transform-box: view-box;
-  transform-origin: 100px 205px;
-  animation: growPlant 2.2s cubic-bezier(.2,.8,.2,1) both;
-  animation-delay: var(--plant-delay);
+@keyframes sway {
+  from { transform: rotate(-4deg) translateY(0); }
+  to { transform: rotate(4deg) translateY(-7px); }
 }
 
-.flower .outer-petals,
-.flower .middle-petals,
-.flower .inner-petals,
-.flower .center {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.flower .outer-petals {
-  animation: bloomOuter 2.8s cubic-bezier(.16,1,.3,1) both;
-  animation-delay: var(--bloom-delay);
-}
-
-.flower .middle-petals {
-  animation: bloomMiddle 2.6s cubic-bezier(.16,1,.3,1) both;
-  animation-delay: calc(var(--bloom-delay) + .3s);
-}
-
-.flower .inner-petals {
-  animation: bloomInner 2.3s cubic-bezier(.16,1,.3,1) both;
-  animation-delay: calc(var(--bloom-delay) + .55s);
-}
-
-.flower .center {
-  animation: centerBloom 1.8s ease-out both;
-  animation-delay: calc(var(--bloom-delay) + .9s);
-}
-
-@keyframes growPlant {
-  from { transform: scaleY(.02); }
-  75% { transform: scaleY(1.06); }
-  to { transform: scaleY(1); }
-}
-
-@keyframes bloomOuter {
-  0% { transform: scale(.08) rotate(-28deg); opacity: 0; }
-  65% { transform: scale(1.08) rotate(4deg); opacity: 1; }
-  100% { transform: scale(1) rotate(0); opacity: 1; }
-}
-
-@keyframes bloomMiddle {
-  0% { transform: scale(.05) rotate(25deg); opacity: 0; }
-  70% { transform: scale(1.1) rotate(-4deg); opacity: 1; }
-  100% { transform: scale(1) rotate(0); opacity: 1; }
-}
-
-@keyframes bloomInner {
-  0% { transform: scale(.05); opacity: 0; }
-  70% { transform: scale(1.13); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes centerBloom {
-  0% { transform: scale(0); }
-  70% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-@keyframes flowerSway {
-  from { transform: rotate(-2.5deg) translateY(0); }
-  to { transform: rotate(2.5deg) translateY(-8px); }
-}
-
-@keyframes titleGlow {
-  from { filter: drop-shadow(0 0 0 #ff9fc0); }
-  to { filter: drop-shadow(0 0 12px #ffb0d0); }
-}
-
-@keyframes nameShine {
-  to { background-position: 300% center; }
-}
-
-@keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateY(22px) scale(.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+@keyframes bloom {
+  from { transform: scale(.15); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 /* CÁNH HOA RƠI */
 .petal {
   position: absolute;
-  top: -60px;
-  left: var(--fall-x);
-  width: var(--petal-size);
-  height: calc(var(--petal-size) * 1.55);
+  top: -35px;
+  left: var(--x);
+  width: var(--size);
+  height: calc(var(--size) * 1.5);
   border-radius: 90% 10% 85% 15%;
-  background:
-    radial-gradient(ellipse at 28% 20%,
-      #fff9fc 0%, #ffb6d0 38%, #ec5790 100%);
-  animation: fall var(--fall-time) linear infinite;
-  animation-delay: var(--fall-delay);
+  background: linear-gradient(140deg, #fff5fa, #ffb2ce 55%, #dc4785);
+  animation: fall var(--duration) linear infinite;
+  animation-delay: var(--delay);
   opacity: 0;
-  filter: drop-shadow(0 2px 4px #d96a9b30);
   will-change: transform;
 }
 
 @keyframes fall {
   0% {
-    transform: translate3d(0, -8vh, 0) rotate(0deg);
+    transform: translate3d(0, -5vh, 0) rotate(0);
     opacity: 0;
   }
-  12% { opacity: var(--fall-opacity); }
-  85% { opacity: var(--fall-opacity); }
+  12% { opacity: .8; }
+  85% { opacity: .65; }
   100% {
-    transform: translate3d(var(--drift), 115vh, 0)
+    transform: translate3d(var(--drift), 110vh, 0)
       rotate(var(--rotation));
     opacity: 0;
   }
 }
 
-/* BÓ HOA HAI GÓC */
-.corner-flower {
-  position: fixed;
-  z-index: 2;
-  bottom: -12px;
-  width: clamp(260px, 43vw, 530px);
-  pointer-events: none;
-  transform-origin: bottom center;
-  animation: cornerSway 6s ease-in-out infinite alternate;
-  filter: drop-shadow(0 6px 16px #c77c9930);
+/* ÁNH SÁNG */
+.sparkle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  color: #ed91bb;
+  font-size: var(--size);
+  animation: glitter var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+  opacity: 0;
 }
 
-.corner-left { left: -30px; }
+@keyframes glitter {
+  0%, 100% { opacity: 0; transform: scale(.4) rotate(0); }
+  50% { opacity: .8; transform: scale(1.15) rotate(35deg); }
+}
+
+/* NỘI DUNG CHÍNH */
+.container {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 36px, 720px);
+  min-height: 100vh;
+  min-height: 100svh;
+  margin-inline: auto;
+  padding:
+    max(48px, env(safe-area-inset-top))
+    0
+    max(245px, calc(245px + env(safe-area-inset-bottom)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: 15px;
+  color: #bd7296;
+  font-size: clamp(10px, 2.5vw, 13px);
+  letter-spacing: clamp(1.5px, .6vw, 4px);
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 9vw, 76px);
+  line-height: 1.16;
+  color: var(--deep-pink);
+  text-shadow: 0 5px 25px #f8a7cb66;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+h1 span {
+  display: block;
+  margin-top: 12px;
+  font-size: clamp(12px, 3.1vw, 22px);
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 400;
+  color: #aa70bb;
+  letter-spacing: clamp(.5px, .4vw, 2px);
+}
+
+.name {
+  max-width: 100%;
+  margin-top: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 10.5vw, 76px);
+  font-weight: bold;
+  letter-spacing: clamp(1px, .8vw, 5px);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  background: linear-gradient(
+    120deg, #ff6099, #c276df, #ff8bb7, #d83c7c
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+  filter: drop-shadow(0 5px 10px #f4a2c255);
+}
+
+.heart-line {
+  margin: 13px 0 20px;
+  color: #f17daa;
+  font-size: clamp(15px, 4vw, 22px);
+  letter-spacing: 2px;
+}
+
+.description {
+  max-width: 500px;
+  padding-inline: 5px;
+  font-size: clamp(14px, 3.5vw, 17px);
+  line-height: 1.9;
+  color: #805b6d;
+}
+
+.description strong {
+  color: #d93d81;
+}
+
+/* KHUNG LỜI CHÚC */
+.greeting-box {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin: 0 auto 24px;
+  padding: clamp(28px, 5vw, 44px) clamp(20px, 5vw, 38px);
+  border: 2px solid #f47ca8;
+  border-radius: clamp(22px, 4vw, 30px);
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,.97),
+    rgba(255,232,243,.96),
+    rgba(255,248,251,.98)
+  );
+  box-shadow:
+    0 0 0 5px rgba(255,182,210,.2),
+    0 12px 35px rgba(190,50,105,.15),
+    inset 0 0 24px rgba(255,180,210,.12);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  color: #71304b;
+  line-height: 1.9;
+  animation: cardIn .9s ease both;
+}
+
+.greeting-box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 8px;
+  border: 1px dashed rgba(224,83,139,.5);
+  border-radius: 17px;
+  pointer-events: none;
+}
+
+.corner-decoration {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  font-size: clamp(25px, 7vw, 36px);
+  filter: drop-shadow(0 4px 6px #d6337840);
+}
+
+.greeting-box::after {
+  content: "🌹";
+  position: absolute;
+  right: 12px;
+  bottom: -23px;
+  font-size: 30px;
+}
+
+.greeting-box h2 {
+  margin-bottom: 19px;
+  color: #cf2e72;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 5vw, 30px);
+  line-height: 1.5;
+}
+
+.greeting-box p {
+  max-width: 570px;
+  margin: 0 auto 15px;
+  font-size: clamp(14px, 3.7vw, 17px);
+  font-weight: 400;
+  line-height: 1.9;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.greeting-box p strong {
+  color: #d93d81;
+}
+
+.greeting-box .signature {
+  margin-top: 22px;
+  margin-bottom: 0;
+  color: #c62c70;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(19px, 4.8vw, 25px);
+  font-weight: bold;
+}
+
+/* CÁC NÚT */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.btn {
+  min-height: 47px;
+  max-width: 100%;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 50px;
+  font-size: clamp(13px, 3.5vw, 16px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  touch-action: manipulation;
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.primary {
+  color: white;
+  background: linear-gradient(135deg, #ff8db5, #e83e88);
+  box-shadow: 0 5px 17px #e95d9740;
+}
+
+.secondary {
+  color: #b25b89;
+  background: #ffffffed;
+  border: 1px solid #f5c4d9;
+}
+
+.hint {
+  margin-top: 17px;
+  color: #bd8da4;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* BÓ HOA Ở HAI GÓC */
+.corner-flower {
+  position: fixed;
+  z-index: 1;
+  bottom: max(-15px, env(safe-area-inset-bottom));
+  width: clamp(150px, 30vw, 340px);
+  pointer-events: none;
+  transform-origin: bottom center;
+  animation: bouquetSway 5s ease-in-out infinite alternate;
+  filter: drop-shadow(0 5px 12px #c77c9920);
+}
+
+.corner-left { left: -35px; }
 
 .corner-right {
-  right: -30px;
+  right: -35px;
   transform: scaleX(-1);
-  animation-name: cornerSwayRight;
+  animation-name: bouquetSwayRight;
 }
 
 .corner-flower svg {
@@ -434,75 +377,72 @@ button:focus-visible {
   height: auto;
 }
 
-@keyframes cornerSway {
+@keyframes bouquetSway {
   from { rotate: -2deg; }
   to { rotate: 2deg; }
 }
 
-@keyframes cornerSwayRight {
+@keyframes bouquetSwayRight {
   from { rotate: 2deg; }
   to { rotate: -2deg; }
 }
 
-/* ÁNH SÁNG LẤP LÁNH */
-.sparkle {
-  position: absolute;
-  left: var(--spark-x);
-  top: var(--spark-y);
-  width: var(--spark-size);
-  height: var(--spark-size);
-  color: #f6a6c8;
-  font-size: var(--spark-size);
-  animation: sparkle var(--spark-time) ease-in-out infinite;
-  animation-delay: var(--spark-delay);
-  opacity: 0;
+@keyframes titleGlow {
+  from { filter: drop-shadow(0 0 0 #ff9fc0); }
+  to { filter: drop-shadow(0 0 10px #ffb0d0); }
 }
 
-@keyframes sparkle {
-  0%, 100% {
-    transform: scale(.3) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1) rotate(35deg);
-    opacity: .8;
-  }
+@keyframes shine {
+  to { background-position: 300% center; }
 }
 
-/* THIỆP LỜI NHẮN */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* THIỆP RIÊNG */
 .popup {
   position: fixed;
   inset: 0;
   z-index: 20;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
-  background: #54334788;
-  backdrop-filter: blur(9px);
+  justify-content: center;
+  padding:
+    max(16px, env(safe-area-inset-top))
+    16px
+    max(16px, env(safe-area-inset-bottom));
+  background: #54334799;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   opacity: 0;
   visibility: hidden;
-  transition: .4s;
+  pointer-events: none;
+  transition: opacity .25s, visibility .25s;
 }
 
 .popup.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .popup-content {
   position: relative;
-  width: min(100%, 450px);
-  max-height: 90vh;
+  width: min(100%, 430px);
+  max-height: 85vh;
+  max-height: 85svh;
   overflow-y: auto;
-  padding: 38px 28px;
+  overscroll-behavior: contain;
+  padding: 38px 24px 27px;
   border: 1px solid white;
-  border-radius: 28px;
+  border-radius: 25px;
   background: linear-gradient(145deg, #fffdfd, #fff0f7);
-  box-shadow: 0 25px 80px #51223c40;
+  box-shadow: 0 20px 65px #51223c40;
   text-align: center;
-  transform: translateY(30px) scale(.88);
-  transition: .4s;
+  transform: translateY(15px) scale(.97);
+  transition: transform .25s;
 }
 
 .popup.active .popup-content {
@@ -511,104 +451,157 @@ button:focus-visible {
 
 .close {
   position: absolute;
-  top: 9px;
-  right: 13px;
-  padding: 5px 10px;
+  top: 7px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
   color: #c27b9c;
   background: transparent;
-  font-size: 1.7rem;
+  font-size: 28px;
 }
 
 .popup-flower {
-  font-size: 3rem;
+  font-size: 42px;
   animation: heartBeat 1.5s ease-in-out infinite;
 }
+
+.popup h2 {
+  margin: 14px 0;
+  color: #dc4c88;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(22px, 6vw, 29px);
+}
+
+.popup p {
+  margin-bottom: 20px;
+  color: #765466;
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: break-word;
+}
+
+.popup p strong { color: #d93d81; }
 
 @keyframes heartBeat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
 }
 
-.popup h2 {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 1.8rem;
-  color: #dc4c88;
-  margin: 16px 0 20px;
-}
-
-.popup p {
-  font-size: 1.03rem;
-  line-height: 2;
-  color: #765466;
-  margin-bottom: 25px;
-}
-
-.popup p strong { color: #d93d81; }
-
 /* ĐIỆN THOẠI */
 @media (max-width: 600px) {
   .container {
-    padding: 55px 15px 180px;
+    width: calc(100% - 30px);
+    padding-top: max(35px, env(safe-area-inset-top));
+    padding-bottom: max(190px, calc(190px + env(safe-area-inset-bottom)));
   }
 
   .eyebrow {
-    font-size: .7rem;
-    letter-spacing: 2px;
+    margin-bottom: 12px;
+    letter-spacing: 1.8px;
   }
 
-  .name { letter-spacing: 2px; }
-
-  .description {
-    font-size: .98rem;
-    line-height: 1.9;
+  h1 {
+    font-size: clamp(37px, 10.5vw, 56px);
   }
 
-  .buttons {
-    flex-direction: column;
-    width: min(100%, 280px);
+  h1 span {
+    max-width: 340px;
+    margin-inline: auto;
+    font-size: clamp(12px, 3.3vw, 16px);
   }
 
-  .buttons button { width: 100%; }
-
-  .corner-flower {
-    width: clamp(180px, 46vw, 260px);
-    bottom: -3px;
+  .name {
+    margin-top: 13px;
+    letter-spacing: 1.5px;
   }
 
-  .flower { max-width: 60vw; }
-
-  .popup-content { padding: 38px 22px 27px; }
+  .heart-line {
+    margin: 12px 0 19px;
+  }
 
   .greeting-box {
-    width: 96%;
-    padding: 30px 19px;
-    margin: 22px auto 32px;
-    border-radius: 24px;
+    padding: 29px 20px 27px;
+    margin-bottom: 22px;
   }
 
   .greeting-box::before {
     inset: 7px;
-    border-radius: 17px;
+    border-radius: 16px;
   }
 
   .greeting-box h2 {
-    font-size: 24px;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
 
   .greeting-box p {
-    font-size: 15px;
+    margin-bottom: 13px;
     line-height: 1.85;
-    margin-bottom: 14px;
   }
 
   .greeting-box .signature {
-    font-size: 21px;
+    margin-top: 19px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: min(100%, 300px);
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .corner-flower {
+    width: clamp(125px, 34vw, 205px);
+    bottom: max(-5px, env(safe-area-inset-bottom));
+  }
+
+  .corner-left { left: -23px; }
+  .corner-right { right: -23px; }
+
+  .popup-content {
+    padding: 39px 20px 24px;
+    border-radius: 22px;
   }
 }
 
-/* Tôn trọng cài đặt giảm chuyển động */
+/* ĐIỆN THOẠI NHỎ */
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .name {
+    font-size: 37px;
+    letter-spacing: 0;
+  }
+
+  .greeting-box {
+    padding-inline: 16px;
+  }
+
+  .corner-flower {
+    width: 125px;
+  }
+}
+
+/* MÀN HÌNH THẤP: GIẢM KHOẢNG TRỐNG */
+@media (max-height: 700px) and (min-width: 601px) {
+  .container {
+    justify-content: flex-start;
+    padding-top: 35px;
+  }
+}
+
+/* GIẢM CHUYỂN ĐỘNG NẾU NGƯỜI DÙNG YÊU CẦU */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -624,10 +617,13 @@ button:focus-visible {
 
 <div class="garden" id="garden" aria-hidden="true"></div>
 
-<div class="corner-flower corner-left" id="bouquetLeft"></div>
-<div class="corner-flower corner-right" id="bouquetRight"></div>
+<div class="corner-flower corner-left" id="bouquetLeft"
+     aria-hidden="true"></div>
+<div class="corner-flower corner-right" id="bouquetRight"
+     aria-hidden="true"></div>
 
 <main class="container">
+
   <p class="eyebrow">♡ A SPECIAL GIFT FOR YOU ♡</p>
 
   <h1>
@@ -637,50 +633,101 @@ button:focus-visible {
 
   <div class="name">Hồng Ngọc</div>
 
-  
-<div class="heart-line">────── ♡ ──────</div>
+  <div class="heart-line">────── ♡ ──────</div>
 
-<section class="greeting-box">
-  <span class="corner-decoration">🌸💗</span>
+  <section class="greeting-box">
+    <span class="corner-decoration" aria-hidden="true">🌸💗</span>
 
-  <h2>💌  💌</h2>
+    <h2>💌 Gửi em yêu 💌</h2>
 
-  <p>
-    Gửi đến em, cô gái anh thương nhất. 💗
-  </p>
+    <p>Gửi đến em, cô gái anh thương nhất. 💗</p>
 
-  <p>
-    Chúc em ngày càng <strong>xinh đẹp</strong>,
-    công việc luôn thuận lợi, lúc nào cũng vui vẻ
-    và hạnh phúc.
-  </p>
+    <p>
+      Chúc em ngày càng <strong>xinh đẹp</strong>,
+      công việc luôn thuận lợi, lúc nào cũng vui vẻ
+      và hạnh phúc.
+    </p>
 
-  <p>
-    Mong rằng mỗi ngày của em đều có thật nhiều
-    niềm vui, yêu thương và những điều tốt đẹp.
-    Mong nụ cười luôn nở trên môi em và mọi điều
-    em mong muốn đều trở thành hiện thực. 🌷
-  </p>
+    <p>
+      Mong rằng mỗi ngày của em đều có thật nhiều
+      niềm vui, yêu thương và những điều tốt đẹp.
+      Mong nụ cười luôn nở trên môi em và mọi điều
+      em mong muốn đều trở thành hiện thực. 🌷
+    </p>
 
-  <p>
-    <strong>Cảm ơn em vì đã luôn ở bên anh.</strong>
-    Cảm ơn em đã mang đến cho anh những khoảnh khắc
-    thật đẹp và những niềm vui giản dị trong cuộc sống.
-  </p>
+    <p>
+      <strong>Cảm ơn em vì đã luôn ở bên anh.</strong>
+      Cảm ơn em đã mang đến cho anh những khoảnh khắc
+      thật đẹp và những niềm vui giản dị trong cuộc sống.
+    </p>
 
-  <p class="signature">
-    Anh thương em rất nhiều! 💖🌹
-  </p>
-</section>
+    <p class="signature">
+      Anh thương em rất nhiều! 💖🌹
+    </p>
+  </section>
 
-    <button class="primary" onclick="togglePopup(false)">
-      💗 Đóng thư
+  <div class="buttons">
+    <button class="btn primary" type="button"
+            onclick="togglePopup(true)">
+      💌 Đọc lời nhắn riêng
+    </button>
+
+    <button class="btn secondary" type="button"
+            onclick="resetFlowers()">
+      🌸 Ngắm hoa nở
+    </button>
+  </div>
+
+  <p class="hint">Dành tặng riêng em, Hồng Ngọc 💗</p>
+
+</main>
+
+<!-- THIỆP RIÊNG -->
+<div class="popup" id="letterPopup"
+     role="dialog" aria-modal="true"
+     aria-labelledby="popupTitle"
+     aria-hidden="true">
+
+  <div class="popup-content">
+    <button class="close" type="button"
+            aria-label="Đóng thiệp"
+            onclick="togglePopup(false)">×</button>
+
+    <div class="popup-flower">💗🌹💗</div>
+
+    <h2 id="popupTitle">Gửi Hồng Ngọc của anh</h2>
+
+    <p>
+      Ngày 20/10 này, anh mong em luôn được yêu thương,
+      luôn có thật nhiều niềm vui và luôn tự tin vào
+      chính mình.
+    </p>
+
+    <p>
+      Dù cuộc sống có những lúc mệt mỏi,
+      anh vẫn mong mình có thể cùng nhau chia sẻ,
+      động viên và tạo nên thật nhiều kỷ niệm đẹp.
+    </p>
+
+    <p>
+      <strong>
+        Chúc cô gái anh yêu luôn bình an,
+        hạnh phúc và cười thật nhiều nhé! 💖
+      </strong>
+    </p>
+
+    <p>Yêu em thật nhiều! 🌷</p>
+
+    <button class="btn primary" type="button"
+            onclick="togglePopup(false)">
+      💗 Ôm anh một cái nào!
     </button>
   </div>
 </div>
 
 <script>
 const garden = document.getElementById("garden");
+const popup = document.getElementById("letterPopup");
 
 const palettes = [
   { light: "#ffc4d8", dark: "#df3c78", center: "#ffdf85" },
@@ -692,383 +739,267 @@ const palettes = [
   { light: "#ffa8c8", dark: "#c82f6d", center: "#ffe4a0" }
 ];
 
-let seed = 0;
+let flowerId = 0;
 
-function flowerSVG(palette, withStem = true) {
+function random(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+/* TẠO MỘT BÔNG HOA SVG */
+function flowerSVG(palette) {
+  const id = "fl" + (++flowerId);
   const { light, dark, center } = palette;
-  const uid = "flower" + (++seed);
 
-  function makePetal(length, width, color, rotation, index, layer) {
-    const shade = index % 3 === 0 ? light : color;
-    const angle = rotation + index * (360 / layer.count);
-    const bend = index % 2 === 0 ? 1 : -1;
+  let petals = "";
 
-    return `
-      <g transform="rotate(${angle} 100 88)">
-        <path
-          d="
-            M 100 91
-            C ${100 - width * .9} ${82 - length * .1},
-              ${100 - width * .95} ${65 - length * .65},
-              ${100 + bend * width * .2} ${88 - length}
-            C ${100 + width * 1.4} ${67 - length * .72},
-              ${100 + width * 1.25} ${79 - length * .22},
-              100 91 Z"
-          fill="${shade}"
-          stroke="#fff6fa"
-          stroke-opacity=".58"
-          stroke-width="1.1"
-          opacity="${index % 4 === 0 ? ".97" : "1"}"
-        />
-        <path
-          d="M 100 90 Q ${100 + bend * width * .35} ${68 - length * .38}
-             ${100 + bend * width * .1} ${88 - length}"
-          fill="none"
-          stroke="#ffffff"
-          stroke-opacity=".32"
-          stroke-width="1.3"
-          stroke-linecap="round"
-        />
-      </g>`;
-  }
+  // Nhiều lớp cánh hoa để tạo chiều sâu.
+  const layers = [
+    { count: 15, rx: 15, ry: 34, radius: 27, color: dark },
+    { count: 13, rx: 12, ry: 27, radius: 21, color: light },
+    { count: 10, rx: 9, ry: 19, radius: 15, color: dark }
+  ];
 
-  let outer = "";
-  let middle = "";
-  let inner = "";
+  layers.forEach((layer, layerIndex) => {
+    for (let i = 0; i < layer.count; i++) {
+      const angle = i * 360 / layer.count
+        + layerIndex * 13;
+      const rad = angle * Math.PI / 180;
 
-  for (let i = 0; i < 20; i++) {
-    outer += makePetal(
-      61 + (i % 3) * 4,
-      23 + (i % 2) * 2,
-      dark,
-      i % 2 ? 4 : -4,
-      i,
-      { count: 20 }
-    );
-  }
+      const cx = 100 + Math.sin(rad) * layer.radius;
+      const cy = 82 - Math.cos(rad) * layer.radius;
 
-  for (let i = 0; i < 16; i++) {
-    middle += makePetal(
-      45 + (i % 3) * 3,
-      19,
-      light,
-      11,
-      i,
-      { count: 16 }
-    );
-  }
+      petals += `
+        <ellipse
+          cx="${cx.toFixed(2)}"
+          cy="${cy.toFixed(2)}"
+          rx="${layer.rx}"
+          ry="${layer.ry}"
+          transform="rotate(${angle} ${cx.toFixed(2)} ${cy.toFixed(2)})"
+          fill="${layer.color}"
+          stroke="#fff7fb"
+          stroke-opacity=".6"
+          stroke-width="1"
+        />`;
+    }
+  });
 
-  for (let i = 0; i < 12; i++) {
-    inner += makePetal(
-      29 + (i % 2) * 3,
-      14,
-      dark,
-      15,
-      i,
-      { count: 12 }
-    );
-  }
+  let pollen = "";
 
-  let stamens = "";
-
-  for (let i = 0; i < 44; i++) {
+  for (let i = 0; i < 30; i++) {
     const angle = i * 2.39996;
-    const radius = 3 + Math.sqrt(i) * 2.1;
+    const radius = 2 + Math.sqrt(i) * 2.2;
     const x = 100 + Math.cos(angle) * radius;
-    const y = 88 + Math.sin(angle) * radius * .72;
+    const y = 82 + Math.sin(angle) * radius * .72;
 
-    stamens += `
-      <ellipse
-        cx="${x.toFixed(2)}"
-        cy="${y.toFixed(2)}"
-        rx="${i % 3 === 0 ? 1.8 : 1.25}"
-        ry="${i % 3 === 0 ? 2.2 : 1.5}"
-        transform="rotate(${i * 23} ${x.toFixed(2)} ${y.toFixed(2)})"
-        fill="${i % 2 ? "#fff0a8" : "#f6bd54"}"
-        stroke="#d69a43"
-        stroke-width=".45"
-      />`;
+    pollen += `
+      <circle cx="${x.toFixed(2)}"
+              cy="${y.toFixed(2)}"
+              r="${i % 3 === 0 ? 1.7 : 1.1}"
+              fill="${i % 2 ? "#fff0a8" : "#e8a444}"/>`;
   }
 
   return `
-  <svg viewBox="0 0 200 220"
-       xmlns="http://www.w3.org/2000/svg"
-       aria-hidden="true">
-    <defs>
-      <radialGradient id="bg${uid}" cx="28%" cy="15%" r="90%">
-        <stop offset="0%" stop-color="#ffffff"/>
-        <stop offset="25%" stop-color="${light}"/>
-        <stop offset="100%" stop-color="${dark}"/>
-      </radialGradient>
+    <svg viewBox="0 0 200 220"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="${id}petal" cx="28%" cy="20%" r="85%">
+          <stop offset="0%" stop-color="#fffdfd"/>
+          <stop offset="35%" stop-color="${light}"/>
+          <stop offset="100%" stop-color="${dark}"/>
+        </radialGradient>
 
-      <radialGradient id="middle${uid}" cx="30%" cy="15%" r="90%">
-        <stop offset="0%" stop-color="#fffdfd"/>
-        <stop offset="35%" stop-color="${light}"/>
-        <stop offset="100%" stop-color="${dark}"/>
-      </radialGradient>
+        <linearGradient id="${id}leaf" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#b9df96"/>
+          <stop offset="55%" stop-color="#68a667"/>
+          <stop offset="100%" stop-color="#356c45"/>
+        </linearGradient>
+      </defs>
 
-      <radialGradient id="center${uid}" cx="35%" cy="25%" r="85%">
-        <stop offset="0%" stop-color="#fffbd9"/>
-        <stop offset="60%" stop-color="${center}"/>
-        <stop offset="100%" stop-color="#df9b45"/>
-      </radialGradient>
+      <g class="stem">
+        <path d="M100 83 C92 125 109 166 99 215"
+              fill="none" stroke="#438052"
+              stroke-width="5" stroke-linecap="round"/>
 
-      <linearGradient id="leaf${uid}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#a7d98e"/>
-        <stop offset="50%" stop-color="#5e9c62"/>
-        <stop offset="100%" stop-color="#356c45"/>
-      </linearGradient>
-    </defs>
+        <path d="M99 145 C73 115 42 120 47 140
+                 C53 157 81 157 99 145Z"
+              fill="url(#${id}leaf)"
+              stroke="#477a4c" stroke-width="1"/>
 
-    ${withStem ? `
-      <g class="plant">
-        <path
-          d="M100 92 C91 126 109 161 98 215"
-          fill="none"
-          stroke="#438052"
-          stroke-width="5.5"
-          stroke-linecap="round"
-        />
+        <path d="M99 145 Q72 135 51 131"
+              fill="none" stroke="#d7efbd"
+              stroke-width="1.5"/>
 
-        <path
-          d="M99 143 C74 113 42 119 47 139
-             C53 156 81 156 99 143Z"
-          fill="url(#leaf${uid})"
-          stroke="#477a4c"
-          stroke-width="1.2"
-        />
+        <path d="M101 177 C122 145 151 150 148 168
+                 C144 185 121 190 101 177Z"
+              fill="url(#${id}leaf)"
+              stroke="#477a4c" stroke-width="1"/>
 
-        <path
-          d="M100 144 Q72 135 51 130"
-          fill="none"
-          stroke="#d7efbd"
-          stroke-width="1.6"
-        />
-
-        <path
-          d="M101 177 C121 145 151 149 148 167
-             C144 184 121 190 101 177Z"
-          fill="url(#leaf${uid})"
-          stroke="#477a4c"
-          stroke-width="1.2"
-        />
-
-        <path
-          d="M104 176 Q126 164 145 160"
-          fill="none"
-          stroke="#d7efbd"
-          stroke-width="1.6"
-        />
-
-        <path
-          d="M99 202 Q77 187 68 198 Q81 212 99 202Z"
-          fill="#78ac6a"
-          stroke="#477a4c"
-          stroke-width="1"
-        />
+        <path d="M104 176 Q126 164 145 161"
+              fill="none" stroke="#d7efbd"
+              stroke-width="1.5"/>
       </g>
-    ` : ""}
 
-    <g class="outer-petals">${outer}</g>
-    <g class="middle-petals">${middle}</g>
-    <g class="inner-petals">${inner}</g>
+      <g style="transform-origin:100px 82px;animation:bloom 1.8s ease-out both">
+        ${petals}
 
-    <g class="center">
-      <ellipse cx="100" cy="88" rx="18" ry="15"
-        fill="url(#center${uid})"/>
-      ${stamens}
-    </g>
-  </svg>`;
+        <circle cx="100" cy="82" r="18"
+                fill="url(#${id}petal)"/>
+
+        <circle cx="100" cy="82" r="13"
+                fill="${center}"/>
+
+        ${pollen}
+      </g>
+    </svg>`;
 }
 
+/* BỐ TRÍ HOA Ở HAI BÊN, CHỪA KHOẢNG TRỐNG CHO CHỮ */
 function generateGarden() {
   garden.innerHTML = "";
 
-  const isMobile = window.innerWidth <= 600;
+  const mobile = window.innerWidth <= 600;
+  const smallPhone = window.innerWidth <= 360;
 
-  // Số lượng hoa lớn hơn, phủ cả trung tâm màn hình
-  const flowerCount = isMobile ? 100 : 180;
+  // Ít hoa hơn bản cũ để điện thoại không bị che kín.
+  const flowerCount = smallPhone ? 10 : mobile ? 15 : 30;
 
   for (let i = 0; i < flowerCount; i++) {
     const flower = document.createElement("div");
     flower.className = "flower";
 
+    // Hoa tập trung ở hai bên và các góc.
+    const side = i % 4;
     let x, y;
-    const zone = i % 10;
 
-    if (zone === 0 || zone === 5) {
-      x = Math.random() * 25;
-      y = Math.random() * 100;
-    } else if (zone === 1 || zone === 6) {
-      x = 75 + Math.random() * 25;
-      y = Math.random() * 100;
-    } else if (zone === 2) {
-      x = Math.random() * 100;
-      y = Math.random() * 30;
-    } else if (zone === 3) {
-      x = Math.random() * 100;
-      y = 70 + Math.random() * 30;
+    if (side === 0) {
+      x = random(-5, 17);
+      y = random(4, 88);
+    } else if (side === 1) {
+      x = random(82, 97);
+      y = random(5, 85);
+    } else if (side === 2) {
+      x = random(0, 30);
+      y = random(65, 95);
     } else {
-      // Hoa xuất hiện cả ở chính giữa
-      x = 8 + Math.random() * 84;
-      y = 8 + Math.random() * 84;
+      x = random(70, 95);
+      y = random(65, 95);
     }
 
-    const size = isMobile
-      ? 75 + Math.random() * 120
-      : 110 + Math.random() * 180;
-
-    const height = size * 1.1;
-
-    // Hoa trung tâm hơi trong suốt để không che lời chúc
-    const nearCenter =
-      x > 20 && x < 80 && y > 20 && y < 80;
-
-    const opacity = nearCenter
-      ? 0.10 + Math.random() * 0.20
-      : 0.40 + Math.random() * 0.40;
-
-    const palette =
-      palettes[Math.floor(Math.random() * palettes.length)];
+    const size = mobile ? random(43, 76) : random(75, 135);
 
     flower.style.setProperty("--x", x + "%");
     flower.style.setProperty("--y", y + "%");
     flower.style.setProperty("--size", size + "px");
-    flower.style.setProperty("--height", height + "px");
-    flower.style.setProperty("--opacity", opacity);
+    flower.style.setProperty("--opacity", random(.22, .52));
+    flower.style.setProperty("--duration", random(4, 8) + "s");
+    flower.style.setProperty("--delay", random(-6, 0) + "s");
 
-    flower.style.setProperty(
-      "--sway", (4 + Math.random() * 4) + "s"
-    );
-    flower.style.setProperty(
-      "--sway-delay", (-Math.random() * 6) + "s"
-    );
-    flower.style.setProperty(
-      "--plant-delay", (Math.random() * 0.6) + "s"
-    );
-    flower.style.setProperty(
-      "--bloom-delay", (Math.random() * 1.8) + "s"
-    );
+    flower.innerHTML =
+      flowerSVG(palettes[Math.floor(Math.random() * palettes.length)]);
 
-    flower.innerHTML = flowerSVG(palette, true);
     garden.appendChild(flower);
   }
 
-  // Cánh hoa rơi
-  const petalCount = isMobile ? 65 : 120;
-
-  const petalColors = [
-    "radial-gradient(ellipse at 28% 20%,#fff8fc,#ffb3cd 50%,#ed6097)",
-    "radial-gradient(ellipse at 28% 20%,#fff7ff,#d9b7ff 50%,#a67ad7)",
-    "radial-gradient(ellipse at 28% 20%,#fffbe7,#ffc9d9 50%,#f28baa)",
-    "radial-gradient(ellipse at 28% 20%,#ffffff,#ffd8e8 50%,#f19ab9)",
-    "radial-gradient(ellipse at 28% 20%,#fff8fc,#ff9cbd 50%,#d94782)"
-  ];
+  // Cánh hoa rơi.
+  const petalCount = mobile ? 15 : 35;
 
   for (let i = 0; i < petalCount; i++) {
     const petal = document.createElement("div");
     petal.className = "petal";
 
-    petal.style.background =
-      petalColors[Math.floor(Math.random() * petalColors.length)];
+    const colors = [
+      "linear-gradient(140deg,#fff5fa,#ffb2ce 55%,#dc4785)",
+      "linear-gradient(140deg,#fff7ff,#d9b7ff 55%,#a67ad7)",
+      "linear-gradient(140deg,#fffbe7,#ffc9d9 55%,#f28baa)"
+    ];
 
-    petal.style.setProperty("--fall-x", Math.random() * 100 + "%");
-    petal.style.setProperty(
-      "--petal-size", (8 + Math.random() * 13) + "px"
-    );
-    petal.style.setProperty(
-      "--fall-time", (10 + Math.random() * 14) + "s"
-    );
-    petal.style.setProperty(
-      "--fall-delay", (-Math.random() * 24) + "s"
-    );
-    petal.style.setProperty(
-      "--drift", (-120 + Math.random() * 240) + "px"
-    );
-    petal.style.setProperty(
-      "--rotation", (360 + Math.random() * 1080) + "deg"
-    );
-    petal.style.setProperty(
-      "--fall-opacity", (0.35 + Math.random() * 0.5).toFixed(2)
-    );
+    petal.style.background =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    petal.style.setProperty("--x", random(0, 100) + "%");
+    petal.style.setProperty("--size", random(6, 12) + "px");
+    petal.style.setProperty("--duration", random(12, 23) + "s");
+    petal.style.setProperty("--delay", random(-22, 0) + "s");
+    petal.style.setProperty("--drift", random(-90, 90) + "px");
+    petal.style.setProperty("--rotation", random(360, 1440) + "deg");
 
     garden.appendChild(petal);
   }
 
-  // Ánh sáng lấp lánh
-  const sparkleCount = isMobile ? 25 : 45;
+  // Ánh sáng lấp lánh.
+  const sparkleCount = mobile ? 10 : 22;
 
   for (let i = 0; i < sparkleCount; i++) {
     const sparkle = document.createElement("div");
     sparkle.className = "sparkle";
-    sparkle.textContent = Math.random() > 0.5 ? "✧" : "✦";
+    sparkle.textContent = Math.random() > .5 ? "✧" : "✦";
 
-    sparkle.style.setProperty("--spark-x", Math.random() * 100 + "%");
-    sparkle.style.setProperty("--spark-y", Math.random() * 100 + "%");
-    sparkle.style.setProperty(
-      "--spark-size", (10 + Math.random() * 14) + "px"
-    );
-    sparkle.style.setProperty(
-      "--spark-time", (2 + Math.random() * 4) + "s"
-    );
-    sparkle.style.setProperty(
-      "--spark-delay", (-Math.random() * 5) + "s"
-    );
+    sparkle.style.setProperty("--x", random(3, 97) + "%");
+    sparkle.style.setProperty("--y", random(3, 95) + "%");
+    sparkle.style.setProperty("--size", random(10, 17) + "px");
+    sparkle.style.setProperty("--duration", random(2, 5) + "s");
+    sparkle.style.setProperty("--delay", random(-5, 0) + "s");
 
     garden.appendChild(sparkle);
   }
 }
 
+/* BÓ HOA Ở HAI GÓC */
 function generateBouquet(id, paletteIndex) {
   const container = document.getElementById(id);
-  const palette = palettes[paletteIndex];
 
   container.innerHTML = `
-    <div style="position:relative;width:100%;aspect-ratio:1/1;">
-      <div style="
-        position:absolute;width:75%;left:0;bottom:0;
-        transform:rotate(-15deg);
-      ">${flowerSVG(palette, true)}</div>
+    <svg viewBox="0 0 220 230"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="${id}leaf" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#b9df96"/>
+          <stop offset="100%" stop-color="#356c45"/>
+        </linearGradient>
+      </defs>
 
-      <div style="
-        position:absolute;width:82%;left:23%;bottom:0;
-        transform:rotate(12deg);
-      ">${flowerSVG(
-        palettes[(paletteIndex + 1) % palettes.length], true
-      )}</div>
+      <path d="M105 230 Q105 145 110 100"
+            fill="none" stroke="#4b8755"
+            stroke-width="6" stroke-linecap="round"/>
 
-      <div style="
-        position:absolute;width:90%;left:8%;bottom:7%;
-        transform:rotate(-3deg);
-      ">${flowerSVG(
-        palettes[(paletteIndex + 2) % palettes.length], true
-      )}</div>
-    </div>`;
+      <path d="M108 180 Q58 135 42 165
+               Q62 199 108 180Z"
+            fill="url(#${id}leaf)"/>
+
+      <path d="M108 190 Q153 145 177 168
+               Q164 201 108 190Z"
+            fill="url(#${id}leaf)"/>
+
+      <g transform="translate(53 30) scale(.66)">
+        ${flowerSVG(palettes[paletteIndex])}
+      </g>
+
+      <g transform="translate(90 2) scale(.75)">
+        ${flowerSVG(palettes[(paletteIndex + 1) % palettes.length])}
+      </g>
+
+      <g transform="translate(105 66) scale(.48)">
+        ${flowerSVG(palettes[(paletteIndex + 2) % palettes.length])}
+      </g>
+    </svg>`;
 }
 
+/* ĐÓNG/MỞ THIỆP */
 function togglePopup(show) {
-  const popup = document.getElementById("letterPopup");
   popup.classList.toggle("active", show);
+  popup.setAttribute("aria-hidden", String(!show));
   document.body.style.overflow = show ? "hidden" : "";
+
+  if (show) {
+    popup.querySelector(".close").focus();
+  }
 }
 
-function resetFlowers() {
-  generateGarden();
-
-  document.querySelectorAll(".corner-flower").forEach(el => {
-    el.animate(
-      [
-        { opacity: 0.55, transform: "scale(.8)" },
-        { opacity: 1, transform: "scale(1.08)" },
-        { opacity: 1, transform: "scale(1)" }
-      ],
-      {
-        duration: 1200,
-        easing: "cubic-bezier(.2,.8,.2,1)"
-      }
-    );
-  });
-}
+popup.addEventListener("click", event => {
+  if (event.target === popup) {
+    togglePopup(false);
+  }
+});
 
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") {
@@ -1076,16 +1007,44 @@ document.addEventListener("keydown", event => {
   }
 });
 
+/* TẠO LẠI HOA */
+function resetFlowers() {
+  generateGarden();
+
+  document.querySelectorAll(".corner-flower").forEach(el => {
+    el.animate(
+      [
+        { opacity: .65, transform: "scale(.92)" },
+        { opacity: 1, transform: "scale(1.04)" },
+        { opacity: 1, transform: "scale(1)" }
+      ],
+      {
+        duration: 650,
+        easing: "ease-out"
+      }
+    );
+  });
+}
+
+/* KHỞI TẠO */
 generateGarden();
 generateBouquet("bouquetLeft", 0);
 generateBouquet("bouquetRight", 2);
 
+/* Chỉ tạo lại hiệu ứng khi đổi kích thước thực sự */
 let resizeTimer;
+let previousWidth = window.innerWidth;
 
 window.addEventListener("resize", () => {
+  if (window.innerWidth === previousWidth) return;
+
+  previousWidth = window.innerWidth;
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(generateGarden, 400);
-});
+
+  resizeTimer = setTimeout(() => {
+    generateGarden();
+  }, 300);
+}, { passive: true });
 </script>
 
 </body>
