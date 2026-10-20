@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#fff0f6">
-<title> 💗</title>
+<title>Chúc Mừng 20/10 💗</title>
 
 <style>
 * {
@@ -27,7 +26,7 @@ html {
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   color: #75445c;
   background:
     radial-gradient(ellipse at 15% 20%, #ffe0ec 0%, transparent 42%),
@@ -49,7 +48,7 @@ body {
   width: min(94%, 760px);
   min-height: 100vh;
   margin: auto;
-  padding: 65px 20px 220px;
+  padding: 40px 15px 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,110 +58,87 @@ body {
 
 .eyebrow {
   font-size: .82rem;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   color: #bd7296;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 h1 {
   font-family: Georgia, serif;
-  font-size: clamp(3rem, 9vw, 5.8rem);
-  line-height: 1.2;
+  font-size: clamp(2.2rem, 7.5vw, 5rem);
+  line-height: 1.25;
   color: var(--deep-pink);
-  text-shadow: 0 5px 25px #f8a7cb66;
+  text-shadow: 0 4px 20px rgba(248, 167, 203, 0.4);
   animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
 h1 span {
   display: block;
-  margin-top: 15px;
-  font-size: .32em;
-  line-height: 1.8;
+  margin-top: 10px;
+  font-size: 0.45em;
+  line-height: 1.5;
   font-style: italic;
   color: #aa70bb;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 .name {
-  margin-top: 18px;
+  margin-top: 15px;
   font-family: Georgia, serif;
-  font-size: clamp(3.2rem, 11vw, 6rem);
+  font-size: clamp(2.5rem, 9vw, 5.5rem);
   font-weight: bold;
-  letter-spacing: 5px;
-  background: linear-gradient(
-    120deg, #ff6099, #c276df, #ff8bb7, #d83c7c
-  );
+  letter-spacing: 3px;
+  background: linear-gradient(120deg, #ff6099, #c276df, #ff8bb7, #d83c7c);
   background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: nameShine 6s linear infinite;
-  filter: drop-shadow(0 5px 14px #f4a2c255);
+  filter: drop-shadow(0 4px 10px rgba(244, 162, 194, 0.35));
 }
 
 .heart-line {
   color: #f17daa;
-  font-size: 1.5rem;
-  margin: 20px 0;
+  font-size: 1.3rem;
+  margin: 15px 0;
   letter-spacing: 4px;
-}
-
-.description {
-  max-width: 530px;
-  font-size: 1.06rem;
-  line-height: 2;
-  color: #805b6d;
-  text-shadow: 0 1px 1px #ffffff80;
-}
-
-.description strong {
-  color: #d93d81;
 }
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  margin-top: 30px;
+  gap: 12px;
+  margin-top: 25px;
+  width: 100%;
 }
 
 button {
   border: none;
   border-radius: 50px;
-  padding: 15px 25px;
+  padding: 14px 28px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform .3s, box-shadow .3s;
+  touch-action: manipulation;
 }
 
-button:hover {
-  transform: translateY(-4px) scale(1.04);
-  box-shadow: 0 10px 25px #d96a9b44;
-}
-
-button:focus-visible {
-  outline: 3px solid #d72f79;
-  outline-offset: 4px;
+button:active {
+  transform: scale(0.96);
 }
 
 .primary {
   color: white;
   background: linear-gradient(135deg, #ff8db5, #e83e88);
-  box-shadow: 0 6px 20px #e95d9744;
+  box-shadow: 0 6px 20px rgba(233, 93, 151, 0.35);
 }
 
 .secondary {
   color: #b25b89;
-  background: #ffffffdc;
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid #f5c4d9;
-}
-
-.hint {
-  font-size: .85rem;
-  color: #bd8da4;
-  margin-top: 25px;
 }
 
 /* KHUNG LỜI CHÚC */
@@ -170,101 +146,98 @@ button:focus-visible {
   position: relative;
   z-index: 4;
   isolation: isolate;
-  width: min(94%, 740px);
-  margin: 25px auto 35px;
-  padding: clamp(30px, 5vw, 48px);
+  width: 100%;
+  margin: 20px auto 25px;
+  padding: clamp(24px, 5vw, 42px) clamp(16px, 4vw, 36px);
 
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, .97),
-    rgba(255, 232, 243, .95),
-    rgba(255, 248, 251, .97)
+    rgba(255, 255, 255, 0.96),
+    rgba(255, 232, 243, 0.94),
+    rgba(255, 248, 251, 0.96)
   );
 
-  border: 3px solid #f47ca8;
-  border-radius: 30px;
+  border: 2px solid #f47ca8;
+  border-radius: 24px;
 
   box-shadow:
-    0 0 0 6px rgba(255, 182, 210, .23),
-    0 15px 40px rgba(190, 50, 105, .22),
-    inset 0 0 25px rgba(255, 180, 210, .16);
+    0 0 0 4px rgba(255, 182, 210, 0.23),
+    0 12px 35px rgba(190, 50, 105, 0.18),
+    inset 0 0 20px rgba(255, 180, 210, 0.15);
 
   text-align: center;
   color: #71304b;
-  line-height: 1.95;
+  line-height: 1.8;
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  animation: cardIn 1.2s ease both;
+  animation: cardIn 1s ease both;
 }
 
-/* Viền trang trí bên trong khung */
 .greeting-box::before {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 9px;
-  border: 1.5px dashed rgba(224, 83, 139, .55);
-  border-radius: 21px;
+  inset: 6px;
+  border: 1.5px dashed rgba(224, 83, 139, 0.45);
+  border-radius: 18px;
   pointer-events: none;
 }
 
-/* Hoa trang trí góc */
 .corner-decoration {
   position: absolute;
-  top: -25px;
-  left: 18px;
-  font-size: 36px;
-  filter: drop-shadow(0 4px 6px rgba(214, 51, 120, .25));
+  top: -20px;
+  left: 15px;
+  font-size: 28px;
+  filter: drop-shadow(0 3px 5px rgba(214, 51, 120, 0.2));
 }
 
 .greeting-box::after {
   content: "🌹";
   position: absolute;
   right: 15px;
-  bottom: -25px;
-  font-size: 38px;
-  filter: drop-shadow(0 4px 6px rgba(214, 51, 120, .25));
+  bottom: -20px;
+  font-size: 30px;
+  filter: drop-shadow(0 3px 5px rgba(214, 51, 120, 0.2));
 }
 
-/* Tiêu đề bên trong khung */
 .greeting-box h2 {
   position: relative;
   z-index: 1;
   color: #cf2e72;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(23px, 4vw, 34px);
-  line-height: 1.5;
-  margin-bottom: 22px;
-  text-shadow: 0 3px 12px rgba(214, 51, 120, .15);
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 4vw, 30px);
+  line-height: 1.4;
+  margin-bottom: 16px;
 }
 
-/* Nội dung lời chúc */
 .greeting-box p {
   position: relative;
   z-index: 1;
   max-width: 600px;
-  margin: 0 auto 17px;
+  margin: 0 auto 14px;
   color: #71304b;
-  font-size: clamp(15px, 2.3vw, 18px);
+  font-size: clamp(14px, 2.8vw, 17px);
   font-weight: 500;
-  line-height: 1.95;
-  overflow-wrap: anywhere;
+  line-height: 1.85;
+  word-break: break-word;
 }
 
-/* Câu kết lời chúc */
+.greeting-box p strong {
+  color: #d93d81;
+}
+
 .greeting-box .signature {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 0;
   color: #c62c70;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(20px, 3vw, 26px);
+  font-family: Georgia, serif;
+  font-size: clamp(18px, 3.5vw, 24px);
   font-weight: bold;
-  text-shadow: 0 2px 8px rgba(214, 51, 120, .12);
 }
 
-/* HOA NỞ KHẮP MÀN HÌNH */
+/* HOA NỞ */
 .flower {
   position: absolute;
   left: var(--x);
@@ -275,7 +248,7 @@ button:focus-visible {
   transform-origin: 50% 85%;
   animation: flowerSway var(--sway) ease-in-out infinite alternate;
   animation-delay: var(--sway-delay);
-  filter: drop-shadow(0 12px 15px #9f3d6933);
+  filter: drop-shadow(0 8px 12px rgba(159, 61, 105, 0.2));
   will-change: transform;
 }
 
@@ -358,7 +331,7 @@ button:focus-visible {
 
 @keyframes titleGlow {
   from { filter: drop-shadow(0 0 0 #ff9fc0); }
-  to { filter: drop-shadow(0 0 12px #ffb0d0); }
+  to { filter: drop-shadow(0 0 10px #ffb0d0); }
 }
 
 @keyframes nameShine {
@@ -366,64 +339,48 @@ button:focus-visible {
 }
 
 @keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateY(22px) scale(.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(18px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* CÁNH HOA RƠI */
 .petal {
   position: absolute;
-  top: -60px;
+  top: -40px;
   left: var(--fall-x);
   width: var(--petal-size);
   height: calc(var(--petal-size) * 1.55);
   border-radius: 90% 10% 85% 15%;
-  background:
-    radial-gradient(ellipse at 28% 20%,
-      #fff9fc 0%, #ffb6d0 38%, #ec5790 100%);
   animation: fall var(--fall-time) linear infinite;
   animation-delay: var(--fall-delay);
   opacity: 0;
-  filter: drop-shadow(0 2px 4px #d96a9b30);
+  filter: drop-shadow(0 2px 4px rgba(217, 106, 155, 0.2));
   will-change: transform;
 }
 
 @keyframes fall {
-  0% {
-    transform: translate3d(0, -8vh, 0) rotate(0deg);
-    opacity: 0;
-  }
+  0% { transform: translate3d(0, -5vh, 0) rotate(0deg); opacity: 0; }
   12% { opacity: var(--fall-opacity); }
   85% { opacity: var(--fall-opacity); }
-  100% {
-    transform: translate3d(var(--drift), 115vh, 0)
-      rotate(var(--rotation));
-    opacity: 0;
-  }
+  100% { transform: translate3d(var(--drift), 105vh, 0) rotate(var(--rotation)); opacity: 0; }
 }
 
-/* BÓ HOA HAI GÓC */
+/* BÓ HOA GÓC */
 .corner-flower {
   position: fixed;
   z-index: 2;
-  bottom: -12px;
-  width: clamp(260px, 43vw, 530px);
+  bottom: -10px;
+  width: clamp(160px, 38vw, 420px);
   pointer-events: none;
   transform-origin: bottom center;
   animation: cornerSway 6s ease-in-out infinite alternate;
-  filter: drop-shadow(0 6px 16px #c77c9930);
+  filter: drop-shadow(0 4px 12px rgba(199, 124, 153, 0.25));
 }
 
-.corner-left { left: -30px; }
+.corner-left { left: -20px; }
 
 .corner-right {
-  right: -30px;
+  right: -20px;
   transform: scaleX(-1);
   animation-name: cornerSwayRight;
 }
@@ -435,13 +392,13 @@ button:focus-visible {
 }
 
 @keyframes cornerSway {
-  from { rotate: -2deg; }
-  to { rotate: 2deg; }
+  from { transform: rotate(-2deg); }
+  to { transform: rotate(2deg); }
 }
 
 @keyframes cornerSwayRight {
-  from { rotate: 2deg; }
-  to { rotate: -2deg; }
+  from { transform: scaleX(-1) rotate(-2deg); }
+  to { transform: scaleX(-1) rotate(2deg); }
 }
 
 /* ÁNH SÁNG LẤP LÁNH */
@@ -459,17 +416,11 @@ button:focus-visible {
 }
 
 @keyframes sparkle {
-  0%, 100% {
-    transform: scale(.3) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1) rotate(35deg);
-    opacity: .8;
-  }
+  0%, 100% { transform: scale(.3) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.1) rotate(35deg); opacity: .8; }
 }
 
-/* THIỆP LỜI NHẮN */
+/* POPUP THIỆP */
 .popup {
   position: fixed;
   inset: 0;
@@ -477,12 +428,13 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  background: #54334788;
-  backdrop-filter: blur(9px);
+  padding: 15px;
+  background: rgba(84, 51, 71, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   opacity: 0;
   visibility: hidden;
-  transition: .4s;
+  transition: all .35s ease;
 }
 
 .popup.active {
@@ -493,16 +445,16 @@ button:focus-visible {
 .popup-content {
   position: relative;
   width: min(100%, 450px);
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
-  padding: 38px 28px;
-  border: 1px solid white;
-  border-radius: 28px;
+  padding: 30px 20px 25px;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
   background: linear-gradient(145deg, #fffdfd, #fff0f7);
-  box-shadow: 0 25px 80px #51223c40;
+  box-shadow: 0 20px 60px rgba(81, 34, 60, 0.25);
   text-align: center;
-  transform: translateY(30px) scale(.88);
-  transition: .4s;
+  transform: translateY(20px) scale(.92);
+  transition: all .35s ease;
 }
 
 .popup.active .popup-content {
@@ -511,16 +463,19 @@ button:focus-visible {
 
 .close {
   position: absolute;
-  top: 9px;
-  right: 13px;
-  padding: 5px 10px;
-  color: #c27b9c;
+  top: 10px;
+  right: 12px;
+  border: none;
   background: transparent;
-  font-size: 1.7rem;
+  color: #c27b9c;
+  font-size: 1.8rem;
+  padding: 5px;
+  cursor: pointer;
+  line-height: 1;
 }
 
 .popup-flower {
-  font-size: 3rem;
+  font-size: 2.8rem;
   animation: heartBeat 1.5s ease-in-out infinite;
 }
 
@@ -532,83 +487,60 @@ button:focus-visible {
 .popup h2 {
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #dc4c88;
-  margin: 16px 0 20px;
+  margin: 12px 0 15px;
 }
 
 .popup p {
-  font-size: 1.03rem;
-  line-height: 2;
+  font-size: 0.98rem;
+  line-height: 1.8;
   color: #765466;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .popup p strong { color: #d93d81; }
 
-/* ĐIỆN THOẠI */
+/* OPTIMIZE CHO MÀN HÌNH NHỎ (MOBILE) */
 @media (max-width: 600px) {
   .container {
-    padding: 55px 15px 180px;
+    padding: 35px 12px 100px;
   }
 
   .eyebrow {
-    font-size: .7rem;
+    font-size: .72rem;
     letter-spacing: 2px;
-  }
-
-  .name { letter-spacing: 2px; }
-
-  .description {
-    font-size: .98rem;
-    line-height: 1.9;
   }
 
   .buttons {
     flex-direction: column;
-    width: min(100%, 280px);
+    width: 100%;
+    max-width: 280px;
   }
 
-  .buttons button { width: 100%; }
-
-  .corner-flower {
-    width: clamp(180px, 46vw, 260px);
-    bottom: -3px;
+  .buttons button {
+    width: 100%;
+    padding: 13px 20px;
   }
-
-  .flower { max-width: 60vw; }
-
-  .popup-content { padding: 38px 22px 27px; }
 
   .greeting-box {
-    width: 96%;
-    padding: 30px 19px;
-    margin: 22px auto 32px;
-    border-radius: 24px;
-  }
-
-  .greeting-box::before {
-    inset: 7px;
-    border-radius: 17px;
+    margin: 18px auto 20px;
   }
 
   .greeting-box h2 {
-    font-size: 24px;
-    margin-bottom: 17px;
+    font-size: 22px;
   }
 
   .greeting-box p {
-    font-size: 15px;
-    line-height: 1.85;
-    margin-bottom: 14px;
+    font-size: 14.5px;
+    line-height: 1.75;
   }
 
   .greeting-box .signature {
-    font-size: 21px;
+    font-size: 19px;
   }
 }
 
-/* Tôn trọng cài đặt giảm chuyển động */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -637,42 +569,61 @@ button:focus-visible {
 
   <div class="name">Hồng Ngọc</div>
 
-  
-<div class="heart-line">────── ♡ ──────</div>
+  <div class="heart-line">────── ♡ ──────</div>
 
-<section class="greeting-box">
-  <span class="corner-decoration">🌸💗</span>
+  <section class="greeting-box">
+    <span class="corner-decoration">🌸💗</span>
 
-  <h2>💌  💌</h2>
+    <h2>💌 Gửi Em 💌</h2>
 
-  <p>
-    Gửi đến em, cô gái anh thương nhất. 💗
-  </p>
+    <p>
+      Gửi đến em, cô gái anh thương nhất. 💗
+    </p>
 
-  <p>
-    Chúc em ngày càng <strong>xinh đẹp</strong>,
-    công việc luôn thuận lợi, lúc nào cũng vui vẻ
-    và hạnh phúc.
-  </p>
+    <p>
+      Chúc em ngày càng <strong>xinh đẹp</strong>,
+      công việc luôn thuận lợi, lúc nào cũng vui vẻ
+      và hạnh phúc.
+    </p>
 
-  <p>
-    Mong rằng mỗi ngày của em đều có thật nhiều
-    niềm vui, yêu thương và những điều tốt đẹp.
-    Mong nụ cười luôn nở trên môi em và mọi điều
-    em mong muốn đều trở thành hiện thực. 🌷
-  </p>
+    <p>
+      Mong rằng mỗi ngày của em đều có thật nhiều
+      niềm vui, yêu thương và những điều tốt đẹp.
+      Mong nụ cười luôn nở trên môi em và mọi điều
+      em mong muốn đều trở thành hiện thực. 🌷
+    </p>
 
-  <p>
-    <strong>Cảm ơn em vì đã luôn ở bên anh.</strong>
-    Cảm ơn em đã mang đến cho anh những khoảnh khắc
-    thật đẹp và những niềm vui giản dị trong cuộc sống.
-  </p>
+    <p>
+      <strong>Cảm ơn em vì đã luôn ở bên anh.</strong>
+      Cảm ơn em đã mang đến cho anh những khoảnh khắc
+      thật đẹp và những niềm vui giản dị trong cuộc sống.
+    </p>
 
-  <p class="signature">
-    Anh thương em rất nhiều! 💖🌹
-  </p>
-</section>
+    <p class="signature">
+      Anh thương em rất nhiều! 💖🌹
+    </p>
+  </section>
 
+  <div class="buttons">
+    <button class="primary" onclick="togglePopup(true)">
+      💌 Mở thiệp nhắn
+    </button>
+    <button class="secondary" onclick="resetFlowers()">
+      🌸 Đổi hoa nở
+    </button>
+  </div>
+</main>
+
+<!-- POPUP THIỆP BỔ SUNG -->
+<div class="popup" id="letterPopup" role="dialog" aria-modal="true">
+  <div class="popup-content">
+    <button class="close" onclick="togglePopup(false)" aria-label="Đóng">&times;</button>
+    <div class="popup-flower">🌸</div>
+    <h2>Lời Nhắn Riêng</h2>
+    <p>
+      Mỗi bông hoa nở ra hôm nay đều đại diện cho một nụ cười của em. 
+      Chúc em một ngày <strong>20/10 thật ngập tràn niềm vui</strong> và tình yêu thương! 💖
+    </p>
     <button class="primary" onclick="togglePopup(false)">
       💗 Đóng thư
     </button>
@@ -703,17 +654,21 @@ function flowerSVG(palette, withStem = true) {
     const angle = rotation + index * (360 / layer.count);
     const bend = index % 2 === 0 ? 1 : -1;
 
+    const w1 = (width - 0.9).toFixed(2);
+    const l1 = (82 - length * 0.1).toFixed(2);
+    const w2 = (width - 0.95).toFixed(2);
+    const l2 = (65 - length * 0.65).toFixed(2);
+    const w3 = (width - 0.2).toFixed(2);
+    const l3 = (88 - length).toFixed(2);
+    const w4 = (width - 1.4).toFixed(2);
+    const l4 = (67 - length * 0.72).toFixed(2);
+    const w5 = (width - 1.25).toFixed(2);
+    const l5 = (79 - length * 0.22).toFixed(2);
+
     return `
       <g transform="rotate(${angle} 100 88)">
         <path
-          d="
-            M 100 91
-            C ${100 - width * .9} ${82 - length * .1},
-              ${100 - width * .95} ${65 - length * .65},
-              ${100 + bend * width * .2} ${88 - length}
-            C ${100 + width * 1.4} ${67 - length * .72},
-              ${100 + width * 1.25} ${79 - length * .22},
-              100 91 Z"
+          d="M 100 91 C ${100 - w1} ${l1}, ${100 - w2} ${l2}, ${100 + bend * w3} ${l3} C ${100 + w4} ${l4}, ${100 + w5} ${l5}, 100 91 Z"
           fill="${shade}"
           stroke="#fff6fa"
           stroke-opacity=".58"
@@ -721,8 +676,7 @@ function flowerSVG(palette, withStem = true) {
           opacity="${index % 4 === 0 ? ".97" : "1"}"
         />
         <path
-          d="M 100 90 Q ${100 + bend * width * .35} ${68 - length * .38}
-             ${100 + bend * width * .1} ${88 - length}"
+          d="M 100 90 Q ${100 + bend * (width - 0.35)} ${68 - length * 0.38} ${100 + bend * (width - 0.1)} ${88 - length}"
           fill="none"
           stroke="#ffffff"
           stroke-opacity=".32"
@@ -737,45 +691,23 @@ function flowerSVG(palette, withStem = true) {
   let inner = "";
 
   for (let i = 0; i < 20; i++) {
-    outer += makePetal(
-      61 + (i % 3) * 4,
-      23 + (i % 2) * 2,
-      dark,
-      i % 2 ? 4 : -4,
-      i,
-      { count: 20 }
-    );
+    outer += makePetal(61 + (i % 3) * 4, 23 + (i % 2) * 2, dark, i % 2 ? 4 : -4, i, { count: 20 });
   }
 
   for (let i = 0; i < 16; i++) {
-    middle += makePetal(
-      45 + (i % 3) * 3,
-      19,
-      light,
-      11,
-      i,
-      { count: 16 }
-    );
+    middle += makePetal(45 + (i % 3) * 3, 19, light, 11, i, { count: 16 });
   }
 
   for (let i = 0; i < 12; i++) {
-    inner += makePetal(
-      29 + (i % 2) * 3,
-      14,
-      dark,
-      15,
-      i,
-      { count: 12 }
-    );
+    inner += makePetal(29 + (i % 2) * 3, 14, dark, 15, i, { count: 12 });
   }
 
   let stamens = "";
-
   for (let i = 0; i < 44; i++) {
     const angle = i * 2.39996;
     const radius = 3 + Math.sqrt(i) * 2.1;
     const x = 100 + Math.cos(angle) * radius;
-    const y = 88 + Math.sin(angle) * radius * .72;
+    const y = 88 + Math.sin(angle) * radius * 0.72;
 
     stamens += `
       <ellipse
@@ -791,9 +723,7 @@ function flowerSVG(palette, withStem = true) {
   }
 
   return `
-  <svg viewBox="0 0 200 220"
-       xmlns="http://www.w3.org/2000/svg"
-       aria-hidden="true">
+  <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
       <radialGradient id="bg${uid}" cx="28%" cy="15%" r="90%">
         <stop offset="0%" stop-color="#ffffff"/>
@@ -822,50 +752,12 @@ function flowerSVG(palette, withStem = true) {
 
     ${withStem ? `
       <g class="plant">
-        <path
-          d="M100 92 C91 126 109 161 98 215"
-          fill="none"
-          stroke="#438052"
-          stroke-width="5.5"
-          stroke-linecap="round"
-        />
-
-        <path
-          d="M99 143 C74 113 42 119 47 139
-             C53 156 81 156 99 143Z"
-          fill="url(#leaf${uid})"
-          stroke="#477a4c"
-          stroke-width="1.2"
-        />
-
-        <path
-          d="M100 144 Q72 135 51 130"
-          fill="none"
-          stroke="#d7efbd"
-          stroke-width="1.6"
-        />
-
-        <path
-          d="M101 177 C121 145 151 149 148 167
-             C144 184 121 190 101 177Z"
-          fill="url(#leaf${uid})"
-          stroke="#477a4c"
-          stroke-width="1.2"
-        />
-
-        <path
-          d="M104 176 Q126 164 145 160"
-          fill="none"
-          stroke="#d7efbd"
-          stroke-width="1.6"
-        />
-
-        <path
-          d="M99 202 Q77 187 68 198 Q81 212 99 202Z"
-          fill="#78ac6a"
-          stroke="#477a4c"
-          stroke-width="1"
-        />
+        <path d="M100 92 C91 126 109 161 98 215" fill="none" stroke="#438052" stroke-width="5.5" stroke-linecap="round"/>
+        <path d="M99 143 C74 113 42 119 47 139 C53 156 81 156 99 143Z" fill="url(#leaf${uid})" stroke="#477a4c" stroke-width="1.2"/>
+        <path d="M100 144 Q72 135 51 130" fill="none" stroke="#d7efbd" stroke-width="1.6"/>
+        <path d="M101 177 C121 145 151 149 148 167 C144 184 121 190 101 177Z" fill="url(#leaf${uid})" stroke="#477a4c" stroke-width="1.2"/>
+        <path d="M104 176 Q126 164 145 160" fill="none" stroke="#d7efbd" stroke-width="1.6"/>
+        <path d="M99 202 Q77 187 68 198 Q81 212 99 202Z" fill="#78ac6a" stroke="#477a4c" stroke-width="1"/>
       </g>
     ` : ""}
 
@@ -874,8 +766,7 @@ function flowerSVG(palette, withStem = true) {
     <g class="inner-petals">${inner}</g>
 
     <g class="center">
-      <ellipse cx="100" cy="88" rx="18" ry="15"
-        fill="url(#center${uid})"/>
+      <ellipse cx="100" cy="88" rx="18" ry="15" fill="url(#center${uid})"/>
       ${stamens}
     </g>
   </svg>`;
@@ -885,9 +776,7 @@ function generateGarden() {
   garden.innerHTML = "";
 
   const isMobile = window.innerWidth <= 600;
-
-  // Số lượng hoa lớn hơn, phủ cả trung tâm màn hình
-  const flowerCount = isMobile ? 100 : 180;
+  const flowerCount = isMobile ? 35 : 100;
 
   for (let i = 0; i < flowerCount; i++) {
     const flower = document.createElement("div");
@@ -909,27 +798,23 @@ function generateGarden() {
       x = Math.random() * 100;
       y = 70 + Math.random() * 30;
     } else {
-      // Hoa xuất hiện cả ở chính giữa
       x = 8 + Math.random() * 84;
       y = 8 + Math.random() * 84;
     }
 
     const size = isMobile
-      ? 75 + Math.random() * 120
-      : 110 + Math.random() * 180;
+      ? 55 + Math.random() * 80
+      : 100 + Math.random() * 160;
 
     const height = size * 1.1;
 
-    // Hoa trung tâm hơi trong suốt để không che lời chúc
-    const nearCenter =
-      x > 20 && x < 80 && y > 20 && y < 80;
+    const nearCenter = x > 20 && x < 80 && y > 20 && y < 80;
 
     const opacity = nearCenter
-      ? 0.10 + Math.random() * 0.20
-      : 0.40 + Math.random() * 0.40;
+      ? 0.12 + Math.random() * 0.15
+      : 0.35 + Math.random() * 0.45;
 
-    const palette =
-      palettes[Math.floor(Math.random() * palettes.length)];
+    const palette = palettes[Math.floor(Math.random() * palettes.length)];
 
     flower.style.setProperty("--x", x + "%");
     flower.style.setProperty("--y", y + "%");
@@ -937,25 +822,17 @@ function generateGarden() {
     flower.style.setProperty("--height", height + "px");
     flower.style.setProperty("--opacity", opacity);
 
-    flower.style.setProperty(
-      "--sway", (4 + Math.random() * 4) + "s"
-    );
-    flower.style.setProperty(
-      "--sway-delay", (-Math.random() * 6) + "s"
-    );
-    flower.style.setProperty(
-      "--plant-delay", (Math.random() * 0.6) + "s"
-    );
-    flower.style.setProperty(
-      "--bloom-delay", (Math.random() * 1.8) + "s"
-    );
+    flower.style.setProperty("--sway", (4 + Math.random() * 4) + "s");
+    flower.style.setProperty("--sway-delay", (-Math.random() * 6) + "s");
+    flower.style.setProperty("--plant-delay", (Math.random() * 0.6) + "s");
+    flower.style.setProperty("--bloom-delay", (Math.random() * 1.8) + "s");
 
     flower.innerHTML = flowerSVG(palette, true);
     garden.appendChild(flower);
   }
 
   // Cánh hoa rơi
-  const petalCount = isMobile ? 65 : 120;
+  const petalCount = isMobile ? 30 : 70;
 
   const petalColors = [
     "radial-gradient(ellipse at 28% 20%,#fff8fc,#ffb3cd 50%,#ed6097)",
@@ -969,34 +846,20 @@ function generateGarden() {
     const petal = document.createElement("div");
     petal.className = "petal";
 
-    petal.style.background =
-      petalColors[Math.floor(Math.random() * petalColors.length)];
-
+    petal.style.background = petalColors[Math.floor(Math.random() * petalColors.length)];
     petal.style.setProperty("--fall-x", Math.random() * 100 + "%");
-    petal.style.setProperty(
-      "--petal-size", (8 + Math.random() * 13) + "px"
-    );
-    petal.style.setProperty(
-      "--fall-time", (10 + Math.random() * 14) + "s"
-    );
-    petal.style.setProperty(
-      "--fall-delay", (-Math.random() * 24) + "s"
-    );
-    petal.style.setProperty(
-      "--drift", (-120 + Math.random() * 240) + "px"
-    );
-    petal.style.setProperty(
-      "--rotation", (360 + Math.random() * 1080) + "deg"
-    );
-    petal.style.setProperty(
-      "--fall-opacity", (0.35 + Math.random() * 0.5).toFixed(2)
-    );
+    petal.style.setProperty("--petal-size", (8 + Math.random() * 12) + "px");
+    petal.style.setProperty("--fall-time", (9 + Math.random() * 12) + "s");
+    petal.style.setProperty("--fall-delay", (-Math.random() * 20) + "s");
+    petal.style.setProperty("--drift", (-80 + Math.random() * 160) + "px");
+    petal.style.setProperty("--rotation", (360 + Math.random() * 720) + "deg");
+    petal.style.setProperty("--fall-opacity", (0.35 + Math.random() * 0.5).toFixed(2));
 
     garden.appendChild(petal);
   }
 
-  // Ánh sáng lấp lánh
-  const sparkleCount = isMobile ? 25 : 45;
+  // Lấp lánh
+  const sparkleCount = isMobile ? 18 : 35;
 
   for (let i = 0; i < sparkleCount; i++) {
     const sparkle = document.createElement("div");
@@ -1005,15 +868,9 @@ function generateGarden() {
 
     sparkle.style.setProperty("--spark-x", Math.random() * 100 + "%");
     sparkle.style.setProperty("--spark-y", Math.random() * 100 + "%");
-    sparkle.style.setProperty(
-      "--spark-size", (10 + Math.random() * 14) + "px"
-    );
-    sparkle.style.setProperty(
-      "--spark-time", (2 + Math.random() * 4) + "s"
-    );
-    sparkle.style.setProperty(
-      "--spark-delay", (-Math.random() * 5) + "s"
-    );
+    sparkle.style.setProperty("--spark-size", (10 + Math.random() * 12) + "px");
+    sparkle.style.setProperty("--spark-time", (2 + Math.random() * 3) + "s");
+    sparkle.style.setProperty("--spark-delay", (-Math.random() * 4) + "s");
 
     garden.appendChild(sparkle);
   }
@@ -1025,24 +882,9 @@ function generateBouquet(id, paletteIndex) {
 
   container.innerHTML = `
     <div style="position:relative;width:100%;aspect-ratio:1/1;">
-      <div style="
-        position:absolute;width:75%;left:0;bottom:0;
-        transform:rotate(-15deg);
-      ">${flowerSVG(palette, true)}</div>
-
-      <div style="
-        position:absolute;width:82%;left:23%;bottom:0;
-        transform:rotate(12deg);
-      ">${flowerSVG(
-        palettes[(paletteIndex + 1) % palettes.length], true
-      )}</div>
-
-      <div style="
-        position:absolute;width:90%;left:8%;bottom:7%;
-        transform:rotate(-3deg);
-      ">${flowerSVG(
-        palettes[(paletteIndex + 2) % palettes.length], true
-      )}</div>
+      <div style="position:absolute;width:75%;left:0;bottom:0;transform:rotate(-15deg);">${flowerSVG(palette, true)}</div>
+      <div style="position:absolute;width:82%;left:23%;bottom:0;transform:rotate(12deg);">${flowerSVG(palettes[(paletteIndex + 1) % palettes.length], true)}</div>
+      <div style="position:absolute;width:90%;left:8%;bottom:7%;transform:rotate(-3deg);">${flowerSVG(palettes[(paletteIndex + 2) % palettes.length], true)}</div>
     </div>`;
 }
 
@@ -1059,13 +901,10 @@ function resetFlowers() {
     el.animate(
       [
         { opacity: 0.55, transform: "scale(.8)" },
-        { opacity: 1, transform: "scale(1.08)" },
+        { opacity: 1, transform: "scale(1.05)" },
         { opacity: 1, transform: "scale(1)" }
       ],
-      {
-        duration: 1200,
-        easing: "cubic-bezier(.2,.8,.2,1)"
-      }
+      { duration: 1000, easing: "cubic-bezier(.2,.8,.2,1)" }
     );
   });
 }
@@ -1081,10 +920,9 @@ generateBouquet("bouquetLeft", 0);
 generateBouquet("bouquetRight", 2);
 
 let resizeTimer;
-
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(generateGarden, 400);
+  resizeTimer = setTimeout(generateGarden, 300);
 });
 </script>
 
